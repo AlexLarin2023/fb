@@ -10,11 +10,8 @@ public class BaseTest {
     protected WebDriver driver;
     protected String username;
     protected String password;
-
     protected LoginPage loginPage;
     protected MainPage mainPage;
-
-    protected Stories stories;
 
 //    protected FriendsProfile friendsProfile;
 //    protected MyProfilePage myProfilePage;
@@ -66,9 +63,6 @@ public class BaseTest {
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
         // Initialize the login page and navigate to it
         loginPage = new LoginPage(driver);
         loginPage.open();
@@ -79,16 +73,6 @@ public class BaseTest {
 
         // Perform login and get to the main page
         mainPage = loginPage.loginToApp(username, password);
-
-
-//        myProfilePage = new MyProfilePage(driver);
-//
-//        friendsProfile = new FriendsProfile(driver);
-
-        // Initialize the Stories page (only once)
-
-        stories = new Stories(driver);
-
 
     }
 //    @AfterMethod
